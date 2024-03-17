@@ -19,16 +19,16 @@ while True:
     else:      
         for x in range(i, len(Erst_str)):
             #print(x)
-            if Erst_str[x] == " " and Erst_str[x+1] == " ":
+            if Erst_str[x].isspace() and Erst_str[x+1].isspace():
                 x += 1
-            elif Erst_str[x].isalpha() or Erst_str[x] == " ":
+            elif Erst_str[x].isalpha() or Erst_str[x].isspace():
                 Main_str += Erst_str[x]
         Erst_str = ""
         i = 0
-        while Main_str[i] == " ": 
+        while Main_str[i].isspace(): 
             i += 1
         for x in range (i, len(Main_str)):
-            if Main_str[x] == " " and Main_str[x+1] == " ":
+            if Main_str[x].isspace() and Main_str[x+1].isspace():
                 x += 1
             else:
                 Erst_str += Main_str[x]
